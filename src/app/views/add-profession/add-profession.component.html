@@ -1,0 +1,23 @@
+<button class="addUser" mat-mini-fab color="primary">
+  <a routerLink="/"><mat-icon>arrow_left</mat-icon></a>
+</button>
+
+<mat-card class="container">
+  <h1>Create a Profession</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="example-card">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required />
+      </mat-form-field>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!form.valid"
+    >
+      Submit
+    </button>
+  </form>
+</mat-card>

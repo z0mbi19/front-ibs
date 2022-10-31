@@ -1,0 +1,46 @@
+<button class="addUser" mat-mini-fab color="primary">
+  <a routerLink="/"><mat-icon>arrow_left</mat-icon></a>
+</button>
+
+<mat-card class="container">
+  <h1>Edit User</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="example-card">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          email="true"
+          matInput
+          formControlName="email"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Profession</mat-label>
+        <mat-select formControlName="IdProfession" required>
+          <mat-option *ngFor="let p of profession" [value]="p.id">{{
+            p.name
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!form.valid"
+    >
+      Submit
+    </button>
+  </form>
+</mat-card>

@@ -1,0 +1,28 @@
+<button class="addUser" mat-mini-fab color="primary">
+  <a routerLink="/"><mat-icon>arrow_left</mat-icon></a>
+</button>
+
+<div class="container">
+  <mat-card class="example-card">
+    <div class="itemCard">
+      <img
+        mat-card-avatar
+        src="https://www.seekpng.com/png/small/349-3499598_portrait-placeholder-placeholder-person.png"
+      />
+      <div>
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Profession:</strong> {{ user.IdProfession.name }}</p>
+      </div>
+    </div>
+    <mat-card-actions align="end">
+      <button (click)="openDialog()" color="warn" mat-raised-button>
+        Delete
+      </button>
+      <button color="primary" mat-raised-button>
+        <a routerLink="/edituser/{{ user.id }}">Edit</a>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

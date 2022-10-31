@@ -1,0 +1,27 @@
+.container {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.itemCard {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.example-card {
+  margin: 3%;
+}
+
+.addUser {
+  margin: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

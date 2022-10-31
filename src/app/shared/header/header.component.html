@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon"
+    mat-button
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <a routerLink="/professionform"> Create profession </a>
+    </button>
+    <a routerLink="/profession">
+      <button mat-menu-item>List of profession</button>
+    </a>
+  </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,22 @@
+<button class="addUser" mat-mini-fab color="primary">
+  <a routerLink="/userform"><mat-icon>add</mat-icon></a>
+</button>
+
+<div class="container">
+  <mat-card *ngFor="let user of users" class="example-card">
+    <div class="itemCard">
+      <img
+        mat-card-avatar
+        src="https://www.seekpng.com/png/small/349-3499598_portrait-placeholder-placeholder-person.png"
+      />
+      <div>
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <hr />
+        <p><strong>Profession:</strong> {{ user.IdProfession.name }}</p>
+        <button mat-raised-button color="primary">
+          <a routerLink="/user/{{ user.id }}">Read more >></a>
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>
